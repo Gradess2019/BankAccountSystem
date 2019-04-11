@@ -1,9 +1,18 @@
 #pragma once
-#include "IAccountOwner.h"
-class User : public IAccountOwner
+#include "IAccountsOwner.h"
+#include "Account.h"
+#include <set>
+
+class User : public IAccountsOwner
 {
 public:
-	User();
-	~User();
+
+	void AddAccount(Account*) override;
+	void DeleteAccount(Account*) override;
+	std::set<Account*>& GetAccounts() override;
+
+private:
+
+	std::set<Account*> accounts;
 };
 

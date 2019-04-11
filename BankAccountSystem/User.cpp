@@ -1,10 +1,18 @@
 #include "User.h"
+#include <algorithm>
 
+void User::AddAccount(Account* newAccount)
+{
+	accounts.insert(newAccount);
+}
 
+void User::DeleteAccount(Account* account)
+{
+	accounts.erase(account);
+	delete account;
+}
 
-User::User()
-{}
-
-
-User::~User()
-{}
+std::set<Account*>& User::GetAccounts()
+{
+	return accounts;
+}
