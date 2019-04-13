@@ -1,0 +1,1 @@
+#include "IDialogManager.h"
