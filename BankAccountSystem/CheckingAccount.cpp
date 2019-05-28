@@ -1,5 +1,8 @@
 #include "CheckingAccount.h"
-#include <iostream>
+#include <sstream>
+#include <iomanip>
+
+CheckingAccount::CheckingAccount(const double& MONEY) : Account(MONEY) {}
 
 std::string CheckingAccount::GetData() const
 {
@@ -8,5 +11,7 @@ std::string CheckingAccount::GetData() const
 
 std::string CheckingAccount::GetShortData() const
 {
-	return Account::GetShortData() + " Расчётный\n";
+	std::ostringstream outputStream;
+	outputStream << Account::GetShortData() << " " << std::fixed << std::setprecision(2) << money << " " << GetNumberOfOperations() << " Расчётный\n";
+	return outputStream.str();
 }

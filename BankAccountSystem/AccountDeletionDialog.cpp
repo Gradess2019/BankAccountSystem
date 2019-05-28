@@ -1,24 +1,41 @@
 #include "AccountDeletionDialog.h"
-#include "Account.h"
 #include "IAccountsOwner.h"
-#include <set>
 
 AccountDeletionDialog::AccountDeletionDialog(IDialogManager* dialogManager) : Dialog(dialogManager) 
 {
-	std::set<Account*> userAccounts = dialogManager->GetAccountOwner()->GetAccounts();
+	userAccounts = dialogManager->GetAccountOwner()->GetAccounts();
 	for (Account* currentAccount : userAccounts)
 	{
 		data.push_back(currentAccount->GetShortData());
 	}
 	data.push_back("Назад");
-	backLine = data.size();
+	SetBackLineId();
 }
 
-void AccountDeletionDialog::HandleInput(int& currentLine, const char& INPUT) const
+void AccountDeletionDialog::SetBackLineId()
 {
-	if (INPUT == Keys::Enter && currentLine == backLine)
+	backLine = data.size() - 1;
+}
+
+void AccountDeletionDialog::HandleInput(int& currentLine, const char& INPUT)
+{
+	if (INPUT == Keys::Enter)
 	{
-		dialogManager->CloseDialog();
+		if (currentLine == backLine)
+		{
+			dialogManager->CloseDialog();
+		} 
+		else
+		{
+			std::set<Account*>::iterator accountsIterator = userAccounts.begin();
+			std::advance(accountsIterator, currentLine);
+			Account* account = *accountsIterator;
+			dialogManager->GetAccountOwner()->DeleteAccount(account);
+			userAccounts = dialogManager->GetAccountOwner()->GetAccounts();
+
+			data.erase(data.begin() + currentLine);
+			SetBackLineId();
+		}
 	} 
 	else
 	{

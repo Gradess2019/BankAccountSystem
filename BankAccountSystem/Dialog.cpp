@@ -3,7 +3,7 @@
 #include <Windows.h>
 #include <conio.h>
 
-Dialog::Dialog(IDialogManager* dialogManager) : dialogManager(dialogManager) {}
+Dialog::Dialog(IDialogManager* dialogManager) : dialogManager(dialogManager), isClose(false) {}
 
 void Dialog::Close()
 {
@@ -46,7 +46,7 @@ void Dialog::Show()
 
 void Dialog::PrintData(const int& CURRENT_LINE) const
 {
-	for (int id = 0; id < data.size(); id++)
+	for (unsigned int id = 0; id < data.size(); id++)
 	{
 		if (CURRENT_LINE == id)
 		{
@@ -57,7 +57,7 @@ void Dialog::PrintData(const int& CURRENT_LINE) const
 	}
 }
 
-void Dialog::HandleInput(int& currentLine, const char& INPUT) const
+void Dialog::HandleInput(int& currentLine, const char& INPUT)
 {
 	if (INPUT == Keys::Up && currentLine > 0)
 	{

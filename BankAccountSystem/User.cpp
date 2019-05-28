@@ -1,5 +1,4 @@
 #include "User.h"
-#include <algorithm>
 
 void User::AddAccount(Account* newAccount)
 {

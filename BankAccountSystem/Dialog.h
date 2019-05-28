@@ -43,6 +43,7 @@ public:
 protected:
 
 	bool isClose;
+	int backLine;
 	
 	std::vector<std::string> data;
 
@@ -52,7 +53,7 @@ protected:
 	void SetSelectorColor() const;
 	void SetDefaultColor() const;
 
-	virtual void HandleInput(int& currentLine, const char& INPUT) const;
+	virtual void HandleInput(int& currentLine, const char& INPUT);
 	virtual void PrintData(const int& CURRENT_LINE) const;
 
 };

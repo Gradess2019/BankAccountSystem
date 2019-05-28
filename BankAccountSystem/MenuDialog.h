@@ -11,9 +11,13 @@ private:
 	{
 		AddAccount,
 		DeleteAccount,
+		TransferMoney,
+		ShowAllAccounts,
+		SortByOperations,
+		SortByMoney,
 		CloseProgram
 	};
 
-	void HandleInput(int& currentLine, const char& INPUT) const override;
+	void HandleInput(int& currentLine, const char& INPUT) override;
 };
 

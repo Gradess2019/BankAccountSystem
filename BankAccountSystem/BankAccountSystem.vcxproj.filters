@@ -13,6 +13,18 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Header Files\Accounts">
+      <UniqueIdentifier>{9c47fd34-9553-4dec-a3ea-36958c8f7281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Dialogs">
+      <UniqueIdentifier>{4cc60e82-4e7e-4fa1-8666-2138ef7e8520}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Accounts">
+      <UniqueIdentifier>{2739660c-54ba-47cf-aeed-4973dbeb9052}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Dialogs">
+      <UniqueIdentifier>{a990da47-999a-4a57-bda9-88931d1765c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Application.h">
@@ -21,29 +33,56 @@
     <ClInclude Include="User.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Account.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="GUI.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="IAccountsOwner.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="IDialogManager.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="Account.h">
+      <Filter>Header Files\Accounts</Filter>
     </ClInclude>
-    <ClInclude Include="Dialog.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CheckingAccount.h">
+      <Filter>Header Files\Accounts</Filter>
     </ClInclude>
-    <ClInclude Include="MenuDialog.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="CreditAccount.h">
+      <Filter>Header Files\Accounts</Filter>
     </ClInclude>
-    <ClInclude Include="AddAccountDialog.h">
-      <Filter>Header Files</Filter>
+    <ClInclude Include="DepositAccount.h">
+      <Filter>Header Files\Accounts</Filter>
+    </ClInclude>
+    <ClInclude Include="TermAccount.h">
+      <Filter>Header Files\Accounts</Filter>
     </ClInclude>
     <ClInclude Include="AccountDeletionDialog.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="AddAccountDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="Dialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="MenuDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="IDialogManager.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountFactory.h">
+      <Filter>Header Files\Accounts</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountsListDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SortingByMoneyDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="SortingByOperationsDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
+    </ClInclude>
+    <ClInclude Include="TransferMoneyDialog.h">
+      <Filter>Header Files\Dialogs</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -53,29 +92,50 @@
     <ClCompile Include="User.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Account.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="GUI.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="IAccountsOwner.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Account.cpp">
+      <Filter>Source Files\Accounts</Filter>
     </ClCompile>
-    <ClCompile Include="IDialogManager.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="AccountFactory.cpp">
+      <Filter>Source Files\Accounts</Filter>
     </ClCompile>
-    <ClCompile Include="Dialog.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="CheckingAccount.cpp">
+      <Filter>Source Files\Accounts</Filter>
     </ClCompile>
-    <ClCompile Include="MenuDialog.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="CreditAccount.cpp">
+      <Filter>Source Files\Accounts</Filter>
     </ClCompile>
-    <ClCompile Include="AddAccountDialog.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="DepositAccount.cpp">
+      <Filter>Source Files\Accounts</Filter>
+    </ClCompile>
+    <ClCompile Include="TermAccount.cpp">
+      <Filter>Source Files\Accounts</Filter>
     </ClCompile>
     <ClCompile Include="AccountDeletionDialog.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AddAccountDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="Dialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="MenuDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="AccountsListDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SortingByMoney.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="SortingByOperationsDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
+    </ClCompile>
+    <ClCompile Include="TransferMoneyDialog.cpp">
+      <Filter>Source Files\Dialogs</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

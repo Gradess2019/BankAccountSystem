@@ -1,20 +1,14 @@
 #pragma once
 #include <string>
 
-enum ECurrency
-{
-	RUB,
-	USD,
-	EUR,
-	GBP
-};
-
 class Account
 {
 
 public:
 
-	Account();
+	Account(const double& MONEY);
+
+	virtual ~Account() = 0;
 
 	void PrintData() const;
 	void PrintShortData() const;
@@ -29,7 +23,9 @@ public:
 
 	bool IsClosed() const;
 
-	virtual ~Account() = 0;
+	double GetMoney() const;
+
+	int GetNumberOfOperations() const;
 
 protected:
 
@@ -37,11 +33,12 @@ protected:
 
 	double money;
 
-	ECurrency currency;
-
 	bool isClosed;
 
 private:
+
+	int numberOfOperations;
+
 	bool IsAvailableAmountOfMoney(const double& AMOUNT_OF_MONEY);
 	void DecreaseMoney(const double& MONEY_DECREMENT);
 
